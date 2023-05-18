@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flashcard Website</title>
+</head>
+<body>
+  <h1>Flashcard Website</h1>
+
+  <h2>All Flashcards</h2>
+  <% if (flashcards.length > 0) { %>
+    <ul>
+      <% flashcards.forEach((flashcard) => { %>
+        <li><strong>Question:</strong> <%= flashcard.question %></li>
+        <li><strong>Answer:</strong> <%= flashcard.answer %></li>
+        <br>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No flashcards available.</p>
+    <% } %>
+  
+    <br>
+    <a href="/">Create New Flashcard</a>
+  </body>
+  </html>
